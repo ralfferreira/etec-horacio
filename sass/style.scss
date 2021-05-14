@@ -50,7 +50,9 @@ h3{
     & .header{
         & img{
             margin-top: 20px;
-            margin-left: 100px;
+            margin-left: 90px;
+            width: 276px;
+            height: 100px;
         }
     }
     & .home-landing-content {
@@ -101,7 +103,7 @@ h3{
 
             & .home-landing-carousel-img{
                 width: 100%;
-                height: 572px;
+                height: 100%;
                 border-radius: 24px 0 0 24px;
             }
 
@@ -117,73 +119,206 @@ h3{
 
 .about {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+    height: 450px;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
-    font-family: $font-family-content;
-    
-    & .about-text{
-        padding: 100px;
-        width: 30%;
+
+    & .about-text {
+        text-align: left;
+        font-family: $font-family-content;
+
         & h2 {
+            font-style: normal;
             font-weight: 600;
-            font-style: normal;
-            margin-bottom: 30px;
-        }
+            font-size: 32px;
+            margin-bottom: 20px;
+            }
+
         & p {
-            font-weight: 400;
             font-style: normal;
+            font-weight: normal;
             font-size: 20px;
             margin-bottom: 30px;
         }
     }
-    & .about-cards {
-        width: 70%;
-        height: 450px;
+    & .about-card{
+        box-shadow: 0px 0px 32px rgba(187, 187, 187, 0.25);
+        border-radius: 8px;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         text-align: center;
-        padding-right: 100px;
-
-        & img {
-            width: 88px;
-            height: 88px;
-            margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 375px;
+        background-color: $color-white;
+        margin-left: 20px;
+        & img{
+            width: 85px;
+            height: 85px;
+        }
+     
+        & h3 {
+            font-family: $font-family-content;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 20px;
         }
 
-        & h3 {
-            font-weight: 600;
-            font-style: normal;            
-            margin-bottom: 20px;
         }
         & p {
-            color: $color-light-black;
+            font-family: $font-family-content;
+            font-style: normal;
+            font-weight: normal;
             font-size: 20px;
-            font-weight: 400;
-            width: 300px;
-            text-align: center;
-        }
-
-        & .about-card-age, .about-card-students, .about-card-employees {
-            box-shadow: 0px 0px 32px rgba(187, 187, 187, 0.25);
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 200px;
-            background-color: $color-white;
+            margin-top: 10px;
         }
     }
-}
-
 
 // Test Etec (Vestibulinho)
 
 .test-etec {
     background-color: $color-light-gray;
+    width: 100%;
+    height: 595px;
+    border-radius: 24px 0px 0px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    & .test-etec-info{
+        width: 100%;
+        height: 100%;
+        padding: 100px;
+        background-image: url('../assets/img/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: 70% 60%;
+        background-size: 260px;
+        & span{
+            font-family: $font-family-hashtag;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: $color-red;
+        }
+        & h2{
+            font-family: $font-family-content;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            color: $color-black;
+        }
+        & .test-etec-info-text{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            & p{
+                font-family: $font-family-content;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                margin-right: 20px;
+                color: $color-light-black;
+            }
+        }
+
+        & a{
+            text-decoration: none;
+            color: $color-white;
+            width: 215px;
+            height: 60px;            
+        }
+
+        & .test-etec-signup{
+            background-color: $color-red;
+            width: 215px;
+            color: $color-white;
+            height: 60px;
+            border: 0;
+            font-style: normal;
+            font-family: $font-family-content;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 0px 4px 24px rgba(96, 96, 96, 0.25);
+            border-radius: 4px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    & .test-etec-image {
+        height: 100%;
+        & img {
+            width: 765px;
+            height: 595px;
+        }
+    }
+    
 }
 
 // Footer
+
+.footer{
+    width: 100%;
+    display: grid;
+    background-color: $color-gray;
+    grid-template-rows: 300px 100%;
+    
+    & .footer-partners {
+        margin-top: 70px;
+        & .footer-partners-img {
+            margin-left: 100px;
+            & img {
+                width: 88px;
+                height: 88px;
+                margin-right: 40px;
+            }
+        }
+    }
+    & h2{
+        color: $color-red;
+        font-family: $font-family-content;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        margin-left: 100px;
+        margin-bottom: 40px;
+    }
+    & ul{
+        margin-left: 100px;
+        & li{
+            text-decoration: none;
+            list-style-type: none;
+            & a{
+                font-family: $font-family-content;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                color: $color-white;
+                text-decoration: none;
+                border-bottom: 1px #fff solid;
+            }
+        }
+    }
+    & .footer-row {
+        display: flex;
+        flex-direction: row;
+        height: 450px;
+    }
+    & .footer-sitemap, .footer-social-media, .footer-school-location {
+        height: 350px;
+    }
+    & .footer-school-location {
+        & iframe {
+            margin-left: 100px;
+        }
+    }
+    & .footer-social-media {
+        & ul li {
+            margin-bottom: 30px;
+        }
+    }
+}
