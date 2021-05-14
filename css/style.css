@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.home-landing {
+  width: 100%;
+  height: 100vh;
+  background-color: #F6F6F6;
+}
+.home-landing .header img {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+.home-landing .home-landing-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-landing .home-landing-content .home-landing-text {
+  width: 50%;
+  flex-direction: column;
+  padding-left: 100px;
+}
+.home-landing .home-landing-content .home-landing-text .home-landing-text-hashtag {
+  font-family: "Rock Salt", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #D5342A;
+  margin-bottom: 20px;
+}
+.home-landing .home-landing-content .home-landing-text .home-landing-text-title {
+  font-weight: 800;
+  font-size: 56px;
+  color: #242424;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.home-landing .home-landing-content .home-landing-text .home-landing-text-title span {
+  color: #D5342A;
+}
+.home-landing .home-landing-content .home-landing-text .home-landing-text-link {
+  color: #D5342A;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.home-landing .home-landing-content .home-landing-text .home-landing-text-link:visited {
+  color: #D5342A;
+}
+.home-landing .home-landing-content .home-landing-carousel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-landing .home-landing-content .home-landing-carousel .home-landing-carousel-img {
+  width: 100%;
+  height: 572px;
+  border-radius: 24px 0 0 24px;
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+}
+.about .about-text {
+  padding: 100px;
+  width: 30%;
+}
+.about .about-text h2 {
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+.about .about-text p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.about .about-cards {
+  width: 70%;
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-right: 100px;
+}
+.about .about-cards img {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 20px;
+}
+.about .about-cards h3 {
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.about .about-cards p {
+  color: #323232;
+  font-size: 20px;
+  font-weight: 400;
+  width: 300px;
+  text-align: center;
+}
+.about .about-cards .about-card-age, .about .about-cards .about-card-students, .about .about-cards .about-card-employees {
+  box-shadow: 0px 0px 32px rgba(187, 187, 187, 0.25);
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  background-color: #FFFFFF;
+}
+
+.test-etec {
+  background-color: #F6F6F6;
+}
+
+/*# sourceMappingURL=style.css.map */
