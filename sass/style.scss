@@ -48,11 +48,30 @@ h3{
     height: 100vh;
     background-color: $color-light-gray;
     & .header{
+
+        @media (min-width: 300px) and (max-width: 426px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         & img{
             margin-top: 20px;
             margin-left: 90px;
             width: 276px;
             height: 100px;
+            @media (max-width: 767px) {
+                margin-left: 40px;
+                margin-bottom: 72px;
+            }
+
+            @media (min-width: 300px) and (max-width: 426px) {
+                margin-left: 0;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-left: 20px;
+                margin-bottom: 72px;
+            }
+            
         }
     }
     & .home-landing-content {
@@ -60,10 +79,26 @@ h3{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: 300px) and (max-width: 426px) {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
         & .home-landing-text {
             width: 50%;
             flex-direction: column;
             padding-left: 100px;
+            @media (max-width: 767px) {
+                padding-left: 50px;
+                width: 100%;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                padding-left: 30px;
+            }
+            @media (min-width: 300px) and (max-width: 426px) {
+                padding: 0;
+            }
             & .home-landing-text-hashtag{
                 font-family: $font-family-hashtag;
                 font-style: normal;
@@ -71,6 +106,16 @@ h3{
                 font-size: 24px;
                 color: $color-red;
                 margin-bottom: 20px;
+
+                @media (max-width: 767px) {
+                    margin-top: 20px;
+                }
+                @media (min-width: 300px) and (max-width: 426px) {
+                    font-size: 18px;
+                }
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 20px;
+                }                
             }
             & .home-landing-text-title {
                 font-weight: 800;
@@ -80,6 +125,16 @@ h3{
                 text-align: left;
                 margin-bottom: 40px;
 
+                @media (max-width: 767px) {
+                    font-size: 48px;
+                }
+                @media (min-width: 300px) and (max-width: 426px) {
+                    font-size: 32px;
+                    text-align: center;
+                }
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 40px;
+                }
                 & span {
                     color: $color-red;
                 }
@@ -100,6 +155,9 @@ h3{
             display: flex;
             flex-direction: column;
             align-items: center;
+            @media (max-width: 767px) {
+                display: none;
+            }
 
             & .home-landing-carousel-img{
                 width: 100%;
@@ -123,7 +181,18 @@ h3{
     padding: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        padding: 45px;
+        padding-left: 30px;
+        
+    }
 
     & .about-text {
         text-align: left;
@@ -134,13 +203,26 @@ h3{
             font-weight: 600;
             font-size: 32px;
             margin-bottom: 20px;
+
+            @media (min-width: 300px) and (max-width: 426px) {
+                font-size: 24px;
             }
+        }
 
         & p {
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                font-size: 22px;
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: 300px) and (max-width: 426px) {
+                font-size: 20px;
+            }
         }
     }
     & .about-card{
@@ -154,6 +236,11 @@ h3{
         height: 375px;
         background-color: $color-white;
         margin-left: 20px;
+
+        @media (max-width: 1024px) {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
         & img{
             width: 85px;
             height: 85px;
@@ -165,6 +252,16 @@ h3{
             font-weight: 600;
             font-size: 24px;
             margin-top: 20px;
+
+            @media (min-width: 300px) and (max-width: 426px) {
+                font-size: 22px;
+            }
+        }
+
+        & p {
+            @media (max-width: 767px) {
+                padding: 30px;
+            }
         }
 
         }
@@ -188,6 +285,17 @@ h3{
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    @media (max-width: 767px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    @media (min-width: 300px) and (max-width: 426px) {
+        height: 650px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        height: 100%;
+    }
     & .test-etec-info{
         width: 100%;
         height: 100%;
@@ -196,6 +304,16 @@ h3{
         background-repeat: no-repeat;
         background-position: 70% 60%;
         background-size: 260px;
+
+        @media (max-width: 767px) {
+            background-image: none;
+            padding: 45px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            background-size: 220px;
+            background-position: 70% 75%;
+            padding: 30px;
+        }
         & span{
             font-family: $font-family-hashtag;
             font-style: normal;
@@ -215,6 +333,15 @@ h3{
             grid-template-columns: 1fr 1fr;
             margin-top: 30px;
             margin-bottom: 50px;
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                margin-bottom: 30px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-bottom: 60px;
+                grid-template-columns: 1fr;
+            }
+            
             & p{
                 font-family: $font-family-content;
                 font-style: normal;
@@ -222,6 +349,9 @@ h3{
                 font-size: 20px;
                 margin-right: 20px;
                 color: $color-light-black;
+                @media (max-width: 1024px) {
+                    margin-bottom: 20px;
+                }
             }
         }
 
@@ -229,7 +359,7 @@ h3{
             text-decoration: none;
             color: $color-white;
             width: 215px;
-            height: 60px;            
+            height: 60px;           
         }
 
         & .test-etec-signup{
@@ -251,9 +381,16 @@ h3{
     }
     & .test-etec-image {
         height: 100%;
+        @media (max-width: 767px) {
+            display: none;
+        }
         & img {
             width: 765px;
             height: 595px;
+            @media (min-width: 768px) and (max-width: 1024px) {
+                width: 100%;
+                height: 400px;
+            }
         }
     }
     
@@ -266,15 +403,31 @@ h3{
     display: grid;
     background-color: $color-gray;
     grid-template-rows: 300px 100%;
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        height: 1250px;
+    }
     
     & .footer-partners {
         margin-top: 70px;
+        & h2 {
+            margin-top: 0;
+        }
         & .footer-partners-img {
             margin-left: 100px;
+            @media (max-width: 767px) {
+                margin-left: 50px;        
+            }
             & img {
                 width: 88px;
                 height: 88px;
                 margin-right: 40px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-left: 30px;
             }
         }
     }
@@ -286,9 +439,25 @@ h3{
         font-size: 32px;
         margin-left: 100px;
         margin-bottom: 40px;
+        @media (max-width: 767px) {
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        @media (min-width: 300px) and (max-width: 426px) {
+            font-size: 28px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px){
+            margin-left: 30px;
+        }
     }
     & ul{
         margin-left: 100px;
+        @media (max-width: 767px) {
+            margin-left: 50px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            margin-left: 30px;
+        }
         & li{
             text-decoration: none;
             list-style-type: none;
@@ -300,6 +469,10 @@ h3{
                 color: $color-white;
                 text-decoration: none;
                 border-bottom: 1px #fff solid;
+
+                @media (min-width: 300px) and (max-width: 426px) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -307,13 +480,40 @@ h3{
         display: flex;
         flex-direction: row;
         height: 450px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            justify-content: space-between;
+        }
     }
     & .footer-sitemap, .footer-social-media, .footer-school-location {
         height: 350px;
+        @media (max-width: 767px) {
+            width: 100%;
+            height: 100%;
+        }
     }
     & .footer-school-location {
         & iframe {
             margin-left: 100px;
+            width: 568px;
+            height: 328px;
+            @media (max-width: 767px) {
+                margin-left: 0;
+                padding: 10px;
+                width: 100%;
+                height: 328px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin-left: 0;
+                padding: 30px;
+                width: 100%;
+                height: 328px;
+            }
+            
+            
         }
     }
     & .footer-social-media {
