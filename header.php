@@ -6,7 +6,7 @@
     <meta name="description" content="Estude em uma das melhores escolas públicas de São Paulo. #VemProHAS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etec HAS</title>
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"><link
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
     <?php wp_head();?>
 </head>

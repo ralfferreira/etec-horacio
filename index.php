@@ -58,7 +58,7 @@
         </div>
         <div class="modality">
             <div class="modality-text">
-                <p class="modality-text-title-content">Modalidades</p>
+                <h2 class="modality-text-title-content">Modalidades</h2>
                 <p class="modality-text-paragraph-content">O HAS, entende que cada pessoa tem sua individualidade.</p>
                 <p class="modality-text-paragraph-content">Por isso aqui dentro temos varias modalidades de ensino para todo mundo se adaptar.</p>
                 <a href="" class="modality-text-link-content">Quero ver todos os cursos</a>
@@ -66,7 +66,7 @@
             <div class="modality-cards">
                 <div class="modality-card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ensino-medio.svg" alt="Ensino Médio">
-                    <div>
+                    <div class="modality-card-text">
                         <p class="modality-card-title">Ensino Médio</p>
                         <p class="modality-card-content">Não tem interesse em nenhum curso técnico? Sem problemas.</p>
                     </div>
@@ -87,5 +87,162 @@
                 </div>
             </div>
         </div>
+        <div class="faq">
+            <h2 class="faq-title">Perguntas frequentes</h2>
+            <div class="faq-cards">
+                <div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+
+                </div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+
+                </div>
+                </div>
+                <div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+
+                </div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+
+                </div>
+                <div class="faq-card">
+                    <div class="question">
+                        <p>Como faço para estudar na escola?</p>
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
+
+                    </div>
+                    <div class="answer">
+                            <p>
+                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            </p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+                <!-- <div class="faq-card">
+                    <a class="faq-card-title">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <a class="faq-card-title" href="#faq-card2">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <a class="faq-card-title" href="#faq-card3">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <a class="faq-card-title" href="#faq-card4">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <a class="faq-card-title" href="#faq-card5">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <a class="faq-card-title" href="#faq-card6">Como faço para estudar na escola?
+                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
+                    </a>
+                    <div class="faq-card-content">
+                        <p>
+                            A ETEC é uma escola pública, por conta disso é 100% gratuita
+                        </p>
+                    </div>
+                </div> -->
+        </div>
 <?php get_footer(); ?>
-        
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/faq.js"></script>
+
+
+    
