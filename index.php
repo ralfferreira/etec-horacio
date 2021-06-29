@@ -73,7 +73,7 @@
                 </div>
                 <div class="modality-card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/m-tec.svg" alt="M-TEC">
-                    <div>
+                    <div class="modality-card-info">
                         <p class="modality-card-title">M-TEC</p>
                         <p class="modality-card-content">Com menos carga horária, você faz o médio e se profissionaliza.</p>
                     </div>
@@ -241,8 +241,5 @@
                 </div> -->
         </div>
 <?php get_footer(); ?>
-
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/faq.js"></script>
-
-
-    

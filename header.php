@@ -14,14 +14,19 @@
     <div class="content">
         <div class="home-landing">
             <header class="header">
-                <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_horizontal_positivo.webp">
+                <a href="<?php bloginfo('url');?>"><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_horizontal_positivo.webp"></a>
                 <!-- Links -->
-                <ul class="header-list">
-                    <li><a href="#"></a>Cursos</li>
-                    <li><a href="#"></a>Extensões</li>
-                    <!-- <li><a href="#"></a>Escola</li> 
-                        <li><a href="#"></a>Instiucional</li> -->
-                    <li><a href="#"></a>Contato</li>
-                </ul>
+                    <ul class="header-list">
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                        <li><a href="cursos">Cursos</a></li>
+                        <li><a href="extensoes">Extensões</a></li>
+                        <!-- <li><a href="#"></a>Escola</li> 
+                            <li><a href="#"></a>Instiucional</li> -->
+                        <li><a href="contato">Contato</a></li>
+                    </ul>
             </header>
-            
+            <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
