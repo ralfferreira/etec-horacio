@@ -23,6 +23,7 @@ Este projeto consiste no Site da ETEC Horácio
 ## Contato
 
 Ralf Dewrich Ferreira - [@ralfdewrich](https://twitter.com/ralfdewrich) - ralfferreira995@gmail.com
+<br />
 Guilherme José de Lira Brito - [@Guilyyra](https://twitter.com/guilyyra) - guilherme.2010.guilherme@gmail.com 
 
 [product-screenshot]: https://i.imgur.com/hCghYrC.png
