@@ -8,6 +8,9 @@
     <title>Etec HAS</title>
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/splide/splide-core.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <?php wp_head();?>
 </head>
 <body>
@@ -22,6 +25,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
+                        <li><a href="<?php bloginfo('url');?>">Início</a></li>
                         <li><a href="cursos">Cursos</a></li>
                         <li><a href="extensoes">Extensões</a></li>
                         <!-- <li><a href="#"></a>Escola</li> 
@@ -30,3 +34,4 @@
                     </ul>
             </header>
             <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
+            

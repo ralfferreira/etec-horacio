@@ -51,3 +51,25 @@ function opening(id){
     idd.style.display="flex";
   }
 }
+
+document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#card-slider', {
+		perPage    : 2,
+		breakpoints: {
+			250: {
+				perPage: 1,
+			}
+		},
+    pagination: false,
+    padding: {
+      left: 30,
+    },
+    'arrowPath': 'm15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z',
+    classes: {
+      prev  : 'splide__arrow--prev prev',
+      next  : 'splide__arrow--next next',
+      autoWidth: true,
+      autoHeight: true,
+    },
+	} ).mount();
+} );

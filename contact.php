@@ -8,7 +8,7 @@
                         <h1 class="contact-landing-text-title">Contato</h1>
                     </div>
                     <div class="contact-container">
-                        <form class="contact-form" method="POST" action="">
+                        <form class="contact-form" id="contact-form" method="POST" action="contact.php">
                             <div class="form-itens">
                                 <div class="form-item">
                                     <h3>Nome:</h3>
@@ -26,28 +26,26 @@
                                     <h3>Mensagem:</h3>
                                     <textarea class="form-message"name="form-message" id="content" cols="30" rows="10" required></textarea>
                                 </div>
-                                <input class="form-submit" type="submit" name="submit" value="Enviar">
+                                <input disabled class="form-submit" type="submit" name="submit" value="Enviar">
                             </div>
                         </form>
                         <?php
                             function sendMail()
                             {
-                                $to = "guilherme.2010.guilherme@gmail.com";
+                                $to = "";
                                 $subject = $_POST['message-subject'];
                                 $message = $_POST['form-message'];
                                 $email = $_POST['message-email'];
                                 $headers = "Cc: " . $email;
-                                echo $a;
                                 // add_action('wp_mail_failed', function ($error) {
                                 //     wp_die("<pre>".print_r($error, true)."</pre>");
                                 // });
-                                $mailResult = "aaa";
                                 $mailResult = wp_mail( $to, $subject, $message, $headers);
                                 if ($mailResult == false){
-                                    echo ("não");
+                                    echo json_encode("Protocolo Invalido");
                                 }
                                 else{
-                                    echo ("enviado");
+                                    echo json_encode("Protocolo OK");
                                 }                   
                             }
                             if (isset($_POST['submit']))
@@ -62,3 +60,4 @@
             <div class="empty-div">
             </div>
 <?php get_footer(); ?>
+<!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/contact.js"></script> -->

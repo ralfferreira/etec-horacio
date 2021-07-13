@@ -21,6 +21,7 @@ $color-light-red: #F6D0CD;
 $color-gray: #363435;
 $color-gray-tonality2: #EFF0F0;
 $color-gray-tonality3: #C4C4C4;
+$color-gray-tonality4: #999999;
 $color-light-gray: #F6F6F6;
 $color-white: #FFFFFF;
 $color-white-tonality2: #EEEEEE;
@@ -62,6 +63,17 @@ h3{
     & .header{
         display: flex;
         justify-content: space-between;
+        @media (min-width: 300px) and (max-width: 426px) {
+            .hamburger {
+                top: 7%;
+            }
+        }
+
+        @media (min-width: 427px) and (max-width: 768px) {
+            .hamburger {
+                top: 9%;
+            }
+        }
 
         @media screen and (max-width: 768px) {
             .line {
@@ -75,7 +87,6 @@ h3{
                 position: absolute;
                 cursor: pointer;
                 right: 5%;
-                top: 9%;
                 transform: translate(-5%, -50%);
                 z-index: 2;
                 transition: 0.25s ease-in-out;
@@ -90,11 +101,12 @@ h3{
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 align-items: center;
                 margin-right: 250px;
                 position: fixed;
                 margin-top: 0;
+                z-index: 1;
                 background-color: $color-light-gray;
                 }
             & .header-list li {
@@ -106,15 +118,20 @@ h3{
                 }
             }
         }
-        
-        @media (min-width: 300px) and (max-width: 426px) {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+
+        & .header-logo {
+            margin-left: 90px;
+            @media (max-width: 767px) {
+                margin-left: 40px;
+                width: 246px;
+                height: 85px;
+            }
+            @media (min-width: 768px) and (max-width: 1280px) {
+                margin-left: 20px;
+            }
         }
         & img{
             margin-top: 20px;
-            margin-left: 90px;
             width: 276px;
             height: 100px;
             @media (max-width: 767px) {
@@ -124,10 +141,6 @@ h3{
 
             @media (min-width: 300px) and (max-width: 426px) {
                 margin-left: 0;
-            }
-            @media (min-width: 768px) and (max-width: 1280px) {
-                margin-left: 20px;
-                margin-bottom: 72px;
             }
         }
         & .header-list{
@@ -236,6 +249,7 @@ h3{
                     font-size: 16px;
                     font-family: $font-family-content;                   
                     font-weight: 500;
+                    text-align: center; 
                     @media (min-width: 300px) and (max-width: 426px) {
                         margin: auto;
                     }
@@ -262,7 +276,7 @@ h3{
             display: flex;
             flex-direction: column;
             align-items: center;
-            @media (max-width: 767px) {
+            @media (max-width: 768px) {
                 display: none;
             }
 
@@ -535,7 +549,7 @@ h3{
         justify-content: center;
     }
     & .modality-cards {
-        width: 70%;
+        width: 60%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -558,7 +572,7 @@ h3{
             align-items: center;
             justify-content: space-between;
             @media (max-width: 1280px) {
-                width: 90vw;
+                width: 80vw;
                 display: grid;
                 grid-template-columns: 90px 1fr; 
             }
@@ -639,7 +653,7 @@ h3{
     font-family: $font-family-content;
     @media (max-width: 1280px) {
         width: 100%;
-        height: 750px;
+        height: 1000px;
         padding: 45px;
         padding-left: 40px;
     }
@@ -657,6 +671,7 @@ h3{
         justify-content: space-between;
         @media (max-width: 1280px) {
             width: 100%;
+            flex-direction: column;
         }
         & .faq-card {
             margin-right: 15px;
@@ -668,6 +683,9 @@ h3{
             justify-content: space-between;
             flex-direction: column;
             margin-bottom: 15px;
+            @media (max-width: 1280px) {
+                width: 80vw;
+            }
             & .question{
                 display: flex;
                 justify-content: space-between;
@@ -679,6 +697,9 @@ h3{
                     font-style: normal;
                     font-weight: 500;
                     font-size: 20px;
+                    @media (max-width: 1080px) {
+                        font-size: 16px;
+                    }
                 }
             }
             & .answer{
@@ -690,6 +711,9 @@ h3{
                     color: $color-light-black;
                     font-size: 20px;
                     font-family: $font-family-content;
+                    @media (max-width: 1080px) {
+                        font-size: 16px;
+                    }
                 }
             }
             &.active{
@@ -736,8 +760,8 @@ h3{
         flex-direction: column;
         padding-left: 100px;
         @media (max-width: 768px) {
-            padding: 45px;
             padding-left: 50px;
+            width: auto;
         }
         & .extensions-landing-text-hashtag{
             font-family: $font-family-hashtag;
@@ -754,6 +778,9 @@ h3{
             font-family: $font-family-content;
             text-align: left;
             margin-bottom: 40px;
+            @media (max-width: 767px) {
+                font-size: 50px;
+            }
         }
     }
 }
@@ -763,13 +790,12 @@ h3{
     align-items: center;
     flex-direction: row;
     width: 100%;
-    height: 600px;
+    height: 100%;
     border-bottom: 1px solid $color-gray-tonality3;
     @media (max-width: 768px) {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 900px;
         padding: 50px;
     }
     & .extension-content{
@@ -787,20 +813,26 @@ h3{
         color: $color-black;
         font-weight: 600;
         font-size: 32px;
+        margin-bottom: 20px;
     }
     & .extension-subtitle{
         font-weight: 500;
         font-size: 24px;
         color: $color-light-black;
+        margin-bottom: 20px;
     }
     & .extension-paragraph{
         font-style: normal;
         font-weight: normal;
         color: $color-light-black-tonality3;
+        margin-bottom: 10px;
     }
     & .extension-map{
+        padding: 10px;
         @media (max-width: 768px) {
-            width: 90%;
+            width: 100%;
+            margin-top: 10px;
+            padding: 0px;
         }
     }
 }
@@ -846,7 +878,7 @@ h3{
 }
 .contact-container{
     font-family: $font-family-content;
-    height: 100%;
+    height: 120%;
     width: 30%;
     padding: 20px;
     background-color: $color-white;
@@ -856,7 +888,9 @@ h3{
     margin-top: 300px;
     @media (max-width: 767px) {
         margin-top: 0px;
+        margin-bottom: 50px;
         width: 90%;
+        height: 120%;
     }
     & .contact-form{
         height: 100%;
@@ -893,14 +927,20 @@ h3{
                 padding: 0px;
                 margin-left: auto;
                 cursor: pointer;
+                @media (max-width: 767px) {
+                    min-height: 40px;
+                    height: 40px;
+                }
             }
         }
     }
 }
 .empty-div{
-    height: 270px;
+    height: 400px;
     background-color: $color-light-gray;
-
+    @media (max-width: 767px) {
+        height: 500px;
+    }
 }
 
 // Footer
@@ -915,7 +955,7 @@ h3{
         display: flex;
         flex-direction: column;
         text-align: left;
-        height: 1250px;
+        height: 1350px;
     }
     
     & .footer-partners {
@@ -1002,6 +1042,12 @@ h3{
             height: 100%;
         }
     }
+    & .footer-sitemap ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+    }
     & .footer-school-location {
         & iframe {
             margin-left: 100px;
@@ -1018,9 +1064,7 @@ h3{
                 padding: 30px;
                 width: 100%;
                 height: 328px;
-            }
-            
-            
+            }            
         }
     }
     & .footer-social-media {
@@ -1042,6 +1086,10 @@ h3{
         width: 40%;
         flex-direction: column;
         padding-left: 100px;
+        
+        @media (max-width: 1280px) {
+            padding-left: 30px;
+        }
         & .courses-landing-text-hashtag{
             font-family: $font-family-hashtag;
             font-style: normal;
@@ -1049,6 +1097,15 @@ h3{
             font-size: 24px;
             color: $color-red;
             margin-bottom: 20px;
+            @media (max-width: 767px) {
+                margin-top: 20px;
+            }
+            @media (min-width: 300px) and (max-width: 426px) {
+                font-size: 18px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                font-size: 20px;
+            }  
         }
         & .courses-landing-text-title{
             font-weight: 800;
@@ -1057,6 +1114,13 @@ h3{
             font-family: $font-family-content;
             text-align: left;
             margin-bottom: 40px;
+            @media (max-width: 1280px) {
+                padding-left: 30px;
+                font-size: 44px;
+            }
+            @media (min-width: 300px) and (max-width: 426px) {
+                padding: 0;
+        }
         }
     }
 }
@@ -1086,16 +1150,30 @@ h3{
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @media (max-width: 767px) {
+            padding: 0;
+        }
+        @media (min-width: 768px) and (max-width: 1080px) {
+            flex-direction: column;
+        }
          & .courses-list {
              display: grid;
-             grid-template-columns: 1fr 1fr 1fr;
+             grid-template-columns: 1fr 1fr;
              grid-template-rows: 1fr 1fr 1fr 1fr;
              justify-content: space-between;
-             width: 50%;
+             width: 100%;
              font-family: $font-family-content;
              background-color: $color-white;
              height: 100%;
-             
+             @media (max-width: 768px) {
+                display: none;
+            }
+
+            @media (min-width: 768px) and (max-width: 1080px) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+
              & .course-item{
                 text-align: center;
                 font-family: Inter;
@@ -1131,16 +1209,20 @@ h3{
              display: block;
          }
          & .course-content{
-             width: 50%;
+             width: 100%;
              height: 640px;
              background-color: $color-light-gray;
              padding: 40px;
-             display: flex;
              flex-direction: column;
              justify-content: start;
              padding-left: 20px;
              transition: 0.5s;
              display: none;
+            @media (max-width: 767px) {
+                padding-left: 30px;
+                width: 100%;
+                height: 100%;
+            }
 
              & div{
                 margin-bottom: 45px;
@@ -1169,7 +1251,72 @@ h3{
              & .course-content-modality{
                 display: grid;
                   grid-template-columns: 1fr 1fr;
+                  & .course-content-modality-align {
+                      text-align: center;
+                  }
              }
          }
         }
+}
+
+#card-slider {
+    display: none;
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.gallery-cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;                
+    border: 1px $color-white-tonality2 solid;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    &:focus, &:active {
+        border: 2px $color-red solid;
+    }
+    & .course-item-icon{
+        width: 40px;
+    }
+}
+
+.splide__track {
+    display: flex;
+    text-align: center;
+}
+
+.splide__arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.prev { 
+    transform: rotate(180deg);
+    margin-right: 20px;
+}
+
+.prev, .next {
+    border: 0;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: $color-red;
+    transition: 0.6s ease;
+    &:disabled{
+        background-color: $color-light-gray;
+        & svg{
+            fill: $color-gray-tonality4;
+        }
+    }
+    & svg{
+        fill: $color-white;
+    }
 }

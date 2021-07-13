@@ -11,49 +11,119 @@
             </div>
             <div class="courses">
                 <h2 class="courses-title">Nossos Cursos</h2>
+                <!-- mobile -->
+                <div id="card-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('adminOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/necktie.svg" alt="">
+                                    <p>Administração</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('accountingOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/calculator.svg" alt="">
+                                    <p>Contabilidade</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('systemDevelopmentOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/instruction.svg" alt="">
+                                    <p>Desenvolvimento de Sistemas</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('eletronicOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/lightning.svg" alt="">
+                                    <p>Eletrônica</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('electrotechnicalOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/plug.svg" alt="">
+                                    <p>Eletrotécnica</p>
+                                </div>
+                            </li> 
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('highSchoolOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/notebook-one.svg" alt="">
+                                    <p>Ensino Médio</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('logisticsOpen')" id="delivery" >
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery.svg" alt="">
+                                    <p>Logística</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechanicOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/factory-building.svg" alt="">
+                                    <p>Mecânica</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechatronicOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/robot-one.svg" alt="">
+                                    <p>Mecatrônica</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div tabindex="1" class="course-item gallery-cell" onclick="opening('networkOpen')">
+                                    <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/server.svg" alt="">
+                                    <p>Redes de Computadores</p>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                <!-- fim mobile -->
                 <div class="courses-container">
                     <div class="courses-list">
-                        <div tabindex="1" class="course-item" onclick="opening('adminOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('adminOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/necktie.svg" alt="">
                             <p>Administração</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('accountingOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('accountingOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/calculator.svg" alt="">
                             <p>Contabilidade</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('systemDevelopmentOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('systemDevelopmentOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/instruction.svg" alt="">
                             <p>Desenvolvimento de Sistemas</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('eletronicOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('eletronicOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/lightning.svg" alt="">
                             <p>Eletrônica</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('electrotechnicalOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('electrotechnicalOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/plug.svg" alt="">
                             <p>Eletrotécnica</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('highSchoolOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('highSchoolOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/notebook-one.svg" alt="">
                             <p>Ensino Médio</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('logisticsOpen')" id="delivery" >
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('logisticsOpen')" id="delivery" >
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery.svg" alt="">
                             <p>Logística</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('mechanicOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechanicOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/factory-building.svg" alt="">
                             <p>Mecânica</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('mechatronicOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechatronicOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/robot-one.svg" alt="">
                             <p>Mecatrônica</p>
                         </div>
-                        <div tabindex="1" class="course-item" onclick="opening('networkOpen')">
+                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('networkOpen')">
                             <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/server.svg" alt="">
                             <p>Redes de Computadores</p>
                         </div>
                     </div>
+
+
                     <div class="course-content" id="adminOpen">
                         <div class="course-content-name">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/necktie.svg" alt="">
@@ -70,9 +140,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -95,9 +165,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -120,9 +190,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -145,9 +215,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -170,9 +240,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -195,9 +265,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -220,9 +290,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -245,9 +315,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -270,9 +340,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -295,9 +365,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p class="course-content-modality-align">Carga Horária</p>
                             <h5>Ensino técnico, M-TEC e ETIM</h5>
-                            <h5>1600 horas</h5>
+                            <h5 class="course-content-modality-align">1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
@@ -310,3 +380,12 @@
     </div>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/courses.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/splide.min.js"></script>
+
+
+
+
+
+
+
+
