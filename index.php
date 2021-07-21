@@ -87,6 +87,32 @@
                 </div>
             </div>
         </div>
+
+        <!--Noticias-->
+        <div class="news">
+            <div class="news-text">
+                <span class="news-text-hashtag">Fique por dentro</span>
+                <h2 class="news-text-title">Notícias e comunicados</h2>
+            </div>
+            <div class="news-content">
+                <?php query_posts('posts_per_page=4'); ?>
+                <?php while(have_posts()):the_post(); ?>
+                    <article class="news-content-post">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                        <div class="post-text">
+                            <h2><?php the_title();?></h2>
+                            <p>Postado por <?php the_author();?></p>
+                        <div>
+                    </article>
+                <?php endwhile; ?>
+                <article class="news-content-post">
+                    <h2>Ver todos +</h2>
+                </article>
+            </div>
+        </div>
+
+
+
         <div class="faq">
             <h2 class="faq-title">Perguntas frequentes</h2>
             <div class="faq-cards">
