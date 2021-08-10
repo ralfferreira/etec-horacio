@@ -97,7 +97,6 @@
             <div class="news-content">
                 <?php query_posts('posts_per_page=4'); ?>
                 <?php while(have_posts()):the_post(); ?>
-                
                     <article class="news-content-post">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
                         <div class="post-text">

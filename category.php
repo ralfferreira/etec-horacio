@@ -19,38 +19,48 @@
                         'hide_empty' => 0, // change to 1 to hide categores not having a single post
                     ) );
                     ?>
-                <div class="category-list splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                        <?php
-                        foreach ( $categories as $category ) 
+                <div class="category-list">
+                    <?php
+                    foreach ( $categories as $category ) 
+                    {
+                        $cat_ID        = (int) $category->term_id;
+                        $category_name = $category->name;
+                        // When viewing a particular category, give it an [active] class
+                        $cat_class = ( $cat_ID == $term_id ) ? 'active' : 'not-active';
+
+                        // I don't like showing the [uncategoirzed] category
+                        if ( strtolower( $category_name ) != 'uncategorized' )
                         {
-                            $cat_ID        = (int) $category->term_id;
-                            $category_name = $category->name;
-
-                            // When viewing a particular category, give it an [active] class
-                            $cat_class = ( $cat_ID == $term_id ) ? 'active' : 'not-active';
-
-                            // I don't like showing the [uncategoirzed] category
-                            if ( strtolower( $category_name ) != 'uncategorized' )
-                            {
-                                    echo '<li class="splide__slide">
-                                            <a class="'. $cat_class .' category-list-item " 
-                                            href="' . get_category_link( $category->term_id ) . '">' .  
-                                            $category->name . 
-                                            '</a> </li>';
+                            if( strtolower( $cat_class ) != 'active'){
+                                echo '<a class="'. $cat_class .' category-list-item " href="' . get_category_link( $category->term_id ) . '">' .  $category->name . '</a>';
+                            }
+                            else{
+                                echo '<a class="'. $cat_class .' category-list-item " href="'.site_url('/blog').'">' .  $category->name . '</a>';
                             }
                         }
-                        ?>
-                        </ul>
-                    </div>
+                    }
+                    ?>
                 </div>
+                    <!-- <div class="category-list">
+                        <a class="category-list-item" href="">Escola</a>
+                        <a class="category-list-item" href="">Institucional</a>
+                        <a class="category-list-item" href="">Artigos</a>
+                        <a class="category-list-item" href="">Comunicados</a>
+                    </div> -->
+
                     <div class="news-list">
                         <?php 
                             $args = array(
                                 'posts_per_page' => 8,
                                 'post_type'      => 'post',
                                 'paged'          => get_query_var( 'paged' ),
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy'  => $term->taxonomy,
+                                        'field'     => 'slug',
+                                        'terms'     => $term->slug,
+                                        )
+                                    )
                             );
                             $wp_query = new WP_Query( $args );
 
@@ -78,7 +88,6 @@
                                     'add_fragment'       => '',
                                     'before_page_number' => '',
                                     'after_page_number'  => '',
-
                                 );
                                 the_posts_pagination($args);
 
@@ -86,5 +95,3 @@
                     </div>
                 </div>
 <?php get_footer(); ?>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/category-list.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/splide.min.js"></script>
