@@ -19,7 +19,9 @@
                         'hide_empty' => 0, // change to 1 to hide categores not having a single post
                     ) );
                     ?>
-                <div class="category-list">
+                 <div class="category-list splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
                     <?php
                     foreach ( $categories as $category ) 
                     {
@@ -32,14 +34,16 @@
                         if ( strtolower( $category_name ) != 'uncategorized' )
                         {
                             if( strtolower( $cat_class ) != 'active'){
-                                echo '<a class="'. $cat_class .' category-list-item " href="' . get_category_link( $category->term_id ) . '">' .  $category->name . '</a>';
+                                echo '<li class="splide__slide"> <a class="'. $cat_class .' category-list-item " href="' . get_category_link( $category->term_id ) . '">' .  $category->name . '</a> </li>';
                             }
                             else{
-                                echo '<a class="'. $cat_class .' category-list-item " href="'.site_url('/blog').'">' .  $category->name . '</a>';
+                                echo '<li class="splide__slide"> <a class="'. $cat_class .' category-list-item " href="'.site_url('/blog').'">' .  $category->name . '</a></li>';
                             }
                         }
                     }
                     ?>
+                        </ul>
+                    </div>
                 </div>
                     <!-- <div class="category-list">
                         <a class="category-list-item" href="">Escola</a>
@@ -67,8 +71,20 @@
                         ?>
                         <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
                         <article class="news-list-post">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                            <a href="<?php the_permalink()?>">
+                                    <?php
+                                        if(has_post_thumbnail()){
+                                            the_post_thumbnail();
+                                        }
+                                        else{
+                                        ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                                        <?
+                                        }
+                                    ?>
+                                </a>
                             <div class="news-list-post-text">
+                            <?php add_filter( 'the_title', 'max_title_length'); ?>
                                 <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
                                 <p>Postado por <?php the_author();?></p>
                             <div>
@@ -95,3 +111,5 @@
                     </div>
                 </div>
 <?php get_footer(); ?>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/category-list.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/splide.min.js"></script>

@@ -98,15 +98,27 @@
                 <?php query_posts('posts_per_page=4'); ?>
                 <?php while(have_posts()):the_post(); ?>
                     <article class="news-content-post">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                        <a href="<?php the_permalink()?>">
+                            <?php
+                                if(has_post_thumbnail()){
+                                    the_post_thumbnail();
+                                }
+                                else{
+                                ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                                <?
+                                }
+                            ?>
+                        </a>
                         <div class="post-text">
-                            <h2><?php the_title();?></h2>
+                            <?php add_filter( 'the_title', 'max_title_length'); ?>
+                            <h2><a class="post-link" href="<?php the_permalink();?>"><?php the_title();?></a></h2>
                             <p>Postado por <?php the_author();?></p>
                         <div>
                     </article>
                 <?php endwhile; ?>
                 <article class="news-content-post">
-                    <a href="blog"><h2>Ver todos +</h2></a>
+                    <a class="see-all" href="blog"><h2>Ver todos +</h2></a>
                 </article>
             </div>
         </div>
