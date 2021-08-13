@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-<!-- /* 
-    Template Name: Blog
-*/ -->
                 <div class="blog-landing-content">
                         <div class="blog-landing-text">
                             <h3 class="blog-landing-text-hashtag">#VemProHAS</h3>
