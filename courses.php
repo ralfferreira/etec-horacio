@@ -10,7 +10,9 @@
                 </div>
             </div>
             <div class="courses">
-                <h2 class="courses-title">Nossos Cursos</h2>
+                <div class="our-courses">
+                    <h2 class="courses-title">Nossos Cursos</h2>
+                </div>
                 <!-- mobile -->
                 <div id="card-slider" class="splide">
                     <div class="splide__track">
