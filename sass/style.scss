@@ -891,9 +891,32 @@ h3{
         width: 40%;
         flex-direction: column;
         padding-left: 100px;
-        @media (max-width: 768px) {
-            padding-left: 40px;
-            width: auto;
+        @media (min-height: 800px) {
+            margin-top: 72px;
+        }
+        @media (min-width: 300px) and (max-width: 399px) and (max-height: 600px) {
+            padding-left: 24px;
+        }
+        @media (width: 1280px) and (height: 950px) {
+            margin-top: 140px;
+        }
+        @media (max-width: 767px) {
+            padding-left: 30px;
+            width: 100%;
+        }
+        @media (width: 768px) {
+            margin-top: 25%;
+        }
+        @media (min-height: 1366px) {
+            font-size: 48px;
+            width: 80%;
+        }
+        @media (min-width: 768px) and (max-width: 1280px) {
+            padding-left: 30px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 56px;
+            width: 70%;
         }
         & .blog-landing-text-hashtag{
             font-family: $font-family-hashtag;
@@ -902,6 +925,15 @@ h3{
             font-size: 24px;
             color: $color-red;
             margin-bottom: 20px;
+            @media (max-width: 767px) {
+                margin-top: 20px;
+            }
+            @media (min-width: 300px) and (max-width: 426px) {
+                font-size: 18px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                font-size: 20px;
+            }  
         }
         & .blog-landing-text-title{
             font-weight: 800;
@@ -911,7 +943,16 @@ h3{
             text-align: left;
             margin-bottom: 40px;
             @media (max-width: 767px) {
-                font-size: 42px;
+                font-size: 43px;
+            }
+            @media (min-height: 1366px) {
+                font-size: 72px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                font-size: 56px;
+            }
+            @media (min-width: 300px) and (max-width: 399px) and (max-height: 600px) {
+                font-size: 36px;
             }
         }
     }
@@ -1009,7 +1050,7 @@ h3{
     justify-content: space-between;
     grid-row-gap: 32px;
     grid-column-gap: 2%;
-    @media (max-width: 1025px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr;
         justify-content: center;
         grid-row-gap: 10;
@@ -1026,10 +1067,24 @@ h3{
             width: 580px;
             display: grid;
             grid-template-rows: 445px 60px;
-            @media (max-width: 1025px) {
-                height: 430px;
+            @media (max-width: 768px) {
+                margin-bottom: 50px;
+                height: 500px;
                 width: 100%;
-                grid-template-rows: 350px 10px;
+                grid-template-rows: 360px 140px;
+                align-items: start;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 445px;
+                grid-template-rows: 420px 90px;
+            }
+            @media (min-width: 1025px) and (max-width: 1280px) {
+                width: 480px;
+            }
+            @media (min-height: 959px) and (max-width: 768px) {
+                width: 500px;
+                height: 500px;
+                grid-template-rows: 470px 30px;
             }
             & img {
                 width: 100%;
@@ -1101,10 +1156,20 @@ h3{
     width: 100%;
     padding: 0 90px 0 90px;
     font-family: $font-family-content;
+    @media (max-width: 768px) {
+        padding: 0 30px 0 30px;
+    }
     & .single-title{
         margin-top: 50px;
         font-size: 44px;
-        font-weight: 600;   
+        font-weight: 600; 
+        margin-bottom: 20px;  
+        @media (max-width: 767px) {
+            font-size: 32px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 36px;
+        }  
     }
     & .single-author{
         font-size: 18px;
@@ -1112,15 +1177,37 @@ h3{
     }
     & .single-content{
         margin-top: 50px;
-        font-size: 21px;
+        font-size: 22px;
         margin-bottom: 50px;
         & img{
             display: block;
             object-fit: cover;
             margin: auto;
+            width: 100%;
         }
         & p{
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        & h1 {
+            font-size: 32px;
+        }
+        & h2 {
+            font-size: 28px;
+        }
+        & h3 {
+            font-size: 22px;
+        }
+        & h4 {
+            font-size: 18px;
+        }
+        & h5 {
+            font-size: 16px;
+        }
+        & h6 {
+            font-size: 14px;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 30px;
         }
     }
     & .single-category{

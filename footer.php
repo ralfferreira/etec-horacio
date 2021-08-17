@@ -14,6 +14,7 @@
                         <li><a href="cursos">Cursos</a></li>
                         <li><a href="extensoes">Extensões</a></li>
                         <li><a href="contato">Contato</a></li>
+                        <li><a href="blog">Notícias</a></li>
                     </ul>
                 </div>
                 <div class="footer-social-media">

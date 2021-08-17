@@ -31,6 +31,7 @@
                         <!-- <li><a href="#"></a>Escola</li> 
                             <li><a href="#"></a>Instiucional</li> -->
                         <li><a href="contato">Contato</a></li>
+                        <li><a href="blog">Notícias</a></li>
                     </ul>
             </header>
             <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
