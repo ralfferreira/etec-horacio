@@ -1269,6 +1269,7 @@ h3{
             flex-direction: column;
         }
         & .faq-card {
+            cursor: pointer;
             margin-right: 15px;
             padding: 20px;
             background: $color-gray-tonality2;
@@ -1786,6 +1787,10 @@ h3{
     & .splide__track{
         display: flex;
         text-align: center;
+        padding-left: 100px;
+        @media (max-width: 768px) {
+            padding-left: 30px;
+        } 
     }
     
     & .splide__arrows {
@@ -1819,7 +1824,7 @@ h3{
     }
     
     & .our-courses {
-        @media (max-width: 720px) {
+        @media (max-width: 768px) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1834,18 +1839,18 @@ h3{
             margin-top: 60px;
             margin-bottom: 20px;
             padding-left: 100px;
-            @media (max-width: 720px) {
+            @media (max-width: 768px) {
                 padding: 0;
             }
         }
     }
     & .courses-container{
         padding-left: 100px;
-        padding-right: 100px;
+        padding-right: 80px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             padding: 0;
         }
         @media (min-width: 768px) and (max-width: 1080px) {
@@ -1945,20 +1950,17 @@ h3{
             }
              & .course-content-modality{
                 display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  & .course-content-modality-align {
-                      text-align: center;
-                  }
+                grid-template-columns: 1fr 1fr;
              }
          }
         }
 }
 
 #card-slider {
-    display: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     @media (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
         justify-content: space-evenly;
     }
 }

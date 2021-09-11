@@ -67,8 +67,8 @@
                 <div class="modality-card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ensino-medio.svg" alt="Ensino Médio">
                     <div class="modality-card-text">
-                        <p class="modality-card-title">Ensino Médio</p>
-                        <p class="modality-card-content">Não tem interesse em nenhum curso técnico? Sem problemas.</p>
+                        <p class="modality-card-title"><?php echo get_theme_mod('modalities-title-1')?></p>
+                        <p class="modality-card-content"><?php echo get_theme_mod('modalities-text-1')?></p>
                     </div>
                 </div>
                 <div class="modality-card">

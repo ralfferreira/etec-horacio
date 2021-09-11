@@ -11,10 +11,10 @@
                     <h2>Mapa do site</h2>
                     <ul>
                         <li><a href="<?php bloginfo('url');?>">Inicio</a></li>
-                        <li><a href="cursos">Cursos</a></li>
-                        <li><a href="extensoes">Extensões</a></li>
-                        <li><a href="contato">Contato</a></li>
-                        <li><a href="blog">Notícias</a></li>
+                        <li><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
+                        <li><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
+                        <li><a href="<?php bloginfo('url');?>/contato">Contato</a></li>
+                        <li><a href="<?php bloginfo('url');?>/blog">Notícias</a></li>
                     </ul>
                 </div>
                 <div class="footer-social-media">

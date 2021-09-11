@@ -77,55 +77,18 @@
                                     <p>Redes de Computadores</p>
                                 </div>
                             </li>
+                            <?php
+                                echo "aaaa";
+                                 $custom_fields = get_post_custom( get_the_ID() );
+                                 $my_custom_field = $custom_fields['my_custom_field'];
+                                 foreach ( $my_custom_field as $key => $value )
+                                   echo $key . " => " . $value . "<br />";
+                            ?>
                         </ul>
                         </div>
                     </div>
                 <!-- fim mobile -->
                 <div class="courses-container">
-                    <div class="courses-list">
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('adminOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/necktie.svg" alt="">
-                            <p>Administração</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('accountingOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/calculator.svg" alt="">
-                            <p>Contabilidade</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('systemDevelopmentOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/instruction.svg" alt="">
-                            <p>Desenvolvimento de Sistemas</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('eletronicOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/lightning.svg" alt="">
-                            <p>Eletrônica</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('electrotechnicalOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/plug.svg" alt="">
-                            <p>Eletrotécnica</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('highSchoolOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/notebook-one.svg" alt="">
-                            <p>Ensino Médio</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('logisticsOpen')" id="delivery" >
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/delivery.svg" alt="">
-                            <p>Logística</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechanicOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/factory-building.svg" alt="">
-                            <p>Mecânica</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('mechatronicOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/robot-one.svg" alt="">
-                            <p>Mecatrônica</p>
-                        </div>
-                        <div tabindex="1" class="course-item gallery-cell" onclick="opening('networkOpen')">
-                            <img class="course-item-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/server.svg" alt="">
-                            <p>Redes de Computadores</p>
-                        </div>
-                    </div>
-
-
                     <div class="course-content" id="adminOpen">
                         <div class="course-content-name">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/necktie.svg" alt="">
@@ -142,9 +105,9 @@
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p class="course-content-modality-align">Carga Horária</p>
+                            <p>Carga Horária</p>
                             <h5>Ensino técnico e Novotec</h5>
-                            <h5 class="course-content-modality-align">1600 horas</p>
+                            <h5>1600 horas</p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>

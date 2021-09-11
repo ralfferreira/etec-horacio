@@ -26,12 +26,12 @@
                         <div class="line"></div>
                     </div>
                         <li><a href="<?php bloginfo('url');?>">Início</a></li>
-                        <li><a href="cursos">Cursos</a></li>
-                        <li><a href="extensoes">Extensões</a></li>
+                        <li><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
+                        <li><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
                         <!-- <li><a href="#"></a>Escola</li> 
                             <li><a href="#"></a>Instiucional</li> -->
-                        <li><a href="contato">Contato</a></li>
-                        <li><a href="blog">Notícias</a></li>
+                        <li><a href="<?php bloginfo('url');?>/contato">Contato</a></li>
+                        <li><a href="<?php bloginfo('url');?>/blog">Notícias</a></li>
                     </ul>
             </header>
             <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
