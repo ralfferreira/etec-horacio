@@ -23,6 +23,8 @@
                         <li><a href="https://www.facebook.com/etechoracioaugusto" target="_blank">Facebook</a></li>
                         <li><a href="https://www.instagram.com/etechoracio/" target="_blank">Instagram</a></li>
                         <li><a href="https://www.linkedin.com/company/etechoracio/" target="_blank">Linkedin</a></li>
+                        <li><a href="https://bit.ly/etechas_yt" target="_blank">Youtube</a></li>
+                        <li><a href="https://vm.tiktok.com/ZMRb5UDa9/" target="_blank">TikTok</a></li>
                     </ul>
                 </div>
                 <div class="footer-school-location">

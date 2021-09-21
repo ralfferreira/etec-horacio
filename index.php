@@ -85,6 +85,20 @@
                         <p class="modality-card-content">Também temos a opção fazer um curso técnico individual.</p>
                     </div>
                 </div>
+                <div class="modality-card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ensino-tecnico.svg" alt="Ensino Técnico">
+                    <div>
+                        <p class="modality-card-title">Ensino Técnico</p>
+                        <p class="modality-card-content">Também temos a opção fazer um curso técnico individual.</p>
+                    </div>
+                </div>
+                <div class="modality-card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ensino-tecnico.svg" alt="Ensino Técnico">
+                    <div>
+                        <p class="modality-card-title">Ensino Técnico</p>
+                        <p class="modality-card-content">Também temos a opção fazer um curso técnico individual.</p>
+                    </div>
+                </div>
             </div>
         </div>
 

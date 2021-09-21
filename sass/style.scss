@@ -603,9 +603,9 @@ h3{
     
     @media (max-width: 1280px) {
         width: 100%;
-        height: 1000px;
+        height: 1260px;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
         grid-template-columns: 1fr;
         padding: 45px;
         padding-left: 75px;
@@ -1427,6 +1427,15 @@ h3{
         font-weight: normal;
         color: $color-light-black-tonality3;
         margin-bottom: 10px;
+    }
+    & .extension-divaragraph{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & img {
+            width: 40px;
+            height: 40px;
+        }
     }
     & .extension-map{
         padding: 10px;
