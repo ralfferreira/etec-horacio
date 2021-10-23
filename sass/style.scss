@@ -1241,13 +1241,14 @@ h3{
 
 .faq{
     width: 100%;
-    height: 600px;
+    height: 800px;
     text-align: left;
     padding-left: 100px;
+    margin-bottom: 10px;
     font-family: $font-family-content;
     @media (max-width: 1280px) {
         width: 100%;
-        height: 1000px;
+        height: 1200px;
         padding: 45px;
         padding-left: 40px;
     }
@@ -1925,8 +1926,8 @@ h3{
              flex-direction: column;
              justify-content: start;
              padding-left: 20px;
-             transition: 0.5s;
              display: none;
+             transition: 0.5s;
             @media (max-width: 767px) {
                 padding-left: 30px;
                 width: 100%;
