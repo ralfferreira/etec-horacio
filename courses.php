@@ -100,14 +100,14 @@
                             </div>
                         </div>
                         <div class="course-content-description">
-                            <p>Descrição:</p>
+                            <p>Descrição</p>
                             <h5><?php echo $field['descricao']?></h5>
                         </div>
                         <div class="course-content-modality">
                             <p>Modalidades</p>
-                            <p>Carga Horária</p>
+                            <p>Período</p>
                             <h5><?php echo $field['modalidades']?></h5>
-                            <h5><?php echo $field['carga_horaria']?></p>
+                            <h5><?php echo $field['periodo']?></p>
                         </div>
                         <div class="course-content-labor-market">
                             <p>Mercado de trabalho</p>
