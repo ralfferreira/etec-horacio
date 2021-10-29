@@ -87,47 +87,85 @@
                 </div>
             </div>
         </div>
+
+        <!--Noticias-->
+        <div class="news">
+            <div class="news-text">
+                <span class="news-text-hashtag">Fique por dentro</span>
+                <h2 class="news-text-title">Notícias e comunicados</h2>
+            </div>
+            <div class="news-content">
+                <?php query_posts('posts_per_page=4'); ?>
+                <?php while(have_posts()):the_post(); ?>
+                    <article class="news-content-post">
+                        <a href="<?php the_permalink()?>">
+                            <?php
+                                if(has_post_thumbnail()){
+                                    the_post_thumbnail();
+                                }
+                                else{
+                                ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testbackground.webp">
+                                <?
+                                }
+                            ?>
+                        </a>
+                        <div class="post-text">
+                            <?php add_filter( 'the_title', 'max_title_length'); ?>
+                            <h2><a class="post-link" href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                            <p>Postado por <?php the_author();?></p>
+                        <div>
+                    </article>
+                <?php endwhile; ?>
+                <article class="news-content-post">
+                    <a class="see-all" href="blog"><h2>Ver todos +</h2></a>
+                </article>
+            </div>
+        </div>
+
+
+
         <div class="faq">
             <h2 class="faq-title">Perguntas frequentes</h2>
             <div class="faq-cards">
                 <div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Quanto custa?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Os cursos oferecidos pelas Etecs do CEETEPS são gratuitos, exige-se somente o recolhimento da taxa de inscrição, compra dos materiais, no decorrer do curso e contribuições voluntárias à APM da unidade.
                             </p>
                     </div>
                 </div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Quanto tempo dura o curso?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Os cursos técnicos têm duração que variam de acordo com o segmento e com sua respectiva matriz curricular (componentes curriculares ou disciplinas), geralmente duram entre 18 e 24 meses. Exceções para os cursos técnicos integrados ao médio (ETIMs, M-TECs, entre outras nomenclaturas), nos quais as matérias técnicas são atreladas às do ensino médio, durante as 3 séries (3 anos ou 36 meses).
                             </p>
                     </div>
 
                 </div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Tenho direito aos benefícios de estudante (passe, meia entrada etc.) fazendo o curso técnico?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Sim, os benefícios são concedidos aos matriculados. Os cadastros são feitos automaticamente aos que, no ato da matrícula, apresentem cópia válida e legível do documento de identidade. Para comprovação de escolaridade nossa unidade oferece, de forma gratuita, declaração com duração de 30 (trinta) dias.
                             </p>
                     </div>
 
@@ -136,109 +174,48 @@
                 <div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Qual o horário de aula?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Oferecemos cursos no período matutino, vespertino e noturno (manhã, tarde e noite). Os cursos no período da manhã, em geral, são integrados ao ensino médio (pegam uma parte do período da tarde, pois a carga horária é maior) e o ensino médio. No período da tarde oferecemos cursos integrados ao médio, e Técnicos. Já no período noturno somente os cursos Técnicos.
                             </p>
                     </div>
 
                 </div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Tem limite de idade? Quais os requisitos?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Para ingresso nos cursos técnicos o candidato deve estar regularmente matriculado a partir da segunda série do ensino médio, ou ter concluído o Ensino médio (segundo grau). Não existe requisito de idade, mas por ser uma certificação de nível médio, exige-se a conclusão deste para conclusão do técnico (para o ingresso não é necessário ter concluído, mas sim estar cursando a partir da segunda série). Já para os cursos integrados ou somente o ensino médio, é necessário estar concluindo a oitava série ou nono ano.
                             </p>
                     </div>
 
                 </div>
                 <div class="faq-card">
                     <div class="question">
-                        <p>Como faço para estudar na escola?</p>
+                        <p>Tenho direito a diploma?</p>
 
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg" alt="">
 
                     </div>
                     <div class="answer">
                             <p>
-                                A ETEC é uma escola pública, por conta disso é 100% gratuita
+                            Aos concluintes dos cursos Técnicos e Integrados é fornecido, em via única, diploma e certificado, dando direito ao registro no órgão de classe responsável e ao exercício profissional reconhecido.
                             </p>
                     </div>
 
                 </div>
                 </div>
             </div>
-                <!-- <div class="faq-card">
-                    <a class="faq-card-title">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <a class="faq-card-title" href="#faq-card2">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <a class="faq-card-title" href="#faq-card3">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <a class="faq-card-title" href="#faq-card4">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <a class="faq-card-title" href="#faq-card5">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <a class="faq-card-title" href="#faq-card6">Como faço para estudar na escola?
-                        <img class="faq-card-icon-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/caret-down.svg">
-                    </a>
-                    <div class="faq-card-content">
-                        <p>
-                            A ETEC é uma escola pública, por conta disso é 100% gratuita
-                        </p>
-                    </div>
-                </div> -->
         </div>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>

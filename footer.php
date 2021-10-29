@@ -11,9 +11,10 @@
                     <h2>Mapa do site</h2>
                     <ul>
                         <li><a href="<?php bloginfo('url');?>">Inicio</a></li>
-                        <li><a href="cursos">Cursos</a></li>
-                        <li><a href="extensoes">Extensões</a></li>
-                        <li><a href="contato">Contato</a></li>
+                        <li><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
+                        <li><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
+                        <li><a href="<?php bloginfo('url');?>/contato">Contato</a></li>
+                        <li><a href="<?php bloginfo('url');?>/blog">Notícias</a></li>
                     </ul>
                 </div>
                 <div class="footer-social-media">
@@ -22,6 +23,8 @@
                         <li><a href="https://www.facebook.com/etechoracioaugusto" target="_blank">Facebook</a></li>
                         <li><a href="https://www.instagram.com/etechoracio/" target="_blank">Instagram</a></li>
                         <li><a href="https://www.linkedin.com/company/etechoracio/" target="_blank">Linkedin</a></li>
+                        <li><a href="https://bit.ly/etechas_yt" target="_blank">Youtube</a></li>
+                        <li><a href="https://vm.tiktok.com/ZMRb5UDa9/" target="_blank">TikTok</a></li>
                     </ul>
                 </div>
                 <div class="footer-school-location">

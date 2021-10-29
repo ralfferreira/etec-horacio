@@ -57,7 +57,34 @@
                     </div>
                 </div>
             </div>
+            
             <div class="empty-div">
+            </div>
+                
+            <!-- <div class="contact-map">
+                <h2 class="contact-map-title">Localização da Escola</h2>
+                <div class="contact-frame-map">
+                    <iframe class="extension-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3621780924277!2d-46.59859718492427!3d-23.519472565932055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13  1!3m3!1m2!1s0x94ce58cbc5bfbf33%3A0xabc0b13f35ba14cf!2sETEC%20Professor%20Hor%C3%A1cio%20Augusto%20da%20Silveira!5e0!3m2!1spt-BR!2sbr!4v1620949711567!5m2!1spt-BR!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>        
+            </div> -->
+            <div class="extension-item" id="contact-item">
+                <div class="extension-content">
+                    <h2 class="extension-title">Informações da Escola</h2>
+                    <h3>Endereço</h3>
+                    <p class="extension-paragraph">ETEC Horácio Augusto da Silveira</p>
+                    <p class="extension-paragraph">R. Alcântara, 113 <br> Vila Guilherme, São Paulo - SP, 02110-010</p>
+                    <h3>Contato</h3>
+                    <p class="extension-paragraph">Telefone: (11) 2905-1125 <br> Email:</p>
+                    <h3>Redes Sociais</h3>
+                    <div class="extension-divaragraph">
+                    <a href="https://www.facebook.com/etechoracioaugusto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook.svg"></a><br>
+                    <a href="https://www.instagram.com/etechoracio/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.svg"></a><br>
+                    <a href="https://www.linkedin.com/company/etechoracio/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin.svg"></a><br>
+                    <a href="https://bit.ly/etechas_yt"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.svg"></a><br>
+                    <a href="https://vm.tiktok.com/ZMRb5UDa9/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/tiktok.svg"></a><br>
+                    </div>
+                </div>
+                <iframe class="extension-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3621780924277!2d-46.59859718492427!3d-23.519472565932055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13  1!3m3!1m2!1s0x94ce58cbc5bfbf33%3A0xabc0b13f35ba14cf!2sETEC%20Professor%20Hor%C3%A1cio%20Augusto%20da%20Silveira!5e0!3m2!1spt-BR!2sbr!4v1620949711567!5m2!1spt-BR!2sbr" width="40%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 <?php get_footer(); ?>
 <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/contact.js"></script> -->
