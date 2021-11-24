@@ -34,16 +34,5 @@
                         </div>
                         <iframe class="extension-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.302675438031!2d-46.5823273855451!3d-23.48560506468297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5f13f4cad0d%3A0xb357568d4ac079ad!2sRua%20Antonio%20Palmieri%2C%20377%20-%20Vila%20Medeiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002210-000!5e0!3m2!1spt-BR!2sbr!4v1624979541838!5m2!1spt-BR!2sbr" width="40%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class="extension-item">
-                        <div class="extension-content">
-                            <h2 class="extension-title">Ligabue</h2>
-                            <p class="extension-paragraph">E.E. Cônego João Ligabue</p>
-                            <p class="extension-paragraph">R. da Grota, 483<br>Tucuruvi, São Paulo - SP, CEP 02206-010</p>
-                            <p class="extension-paragraph">Telefone: (11) 2905-1125</p>
-                            <h3 class="extension-subtitle"> Cursos: </h3>
-                            <p class="extension-paragraph">Administração - Noturno<br>Informática - Noturno<br>Logística - Noturno</p>
-                        </div>
-                        <iframe class="extension-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.412616283303!2d-46.59863428554506!3d-23.481643064537177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef60bc8c23011%3A0xc9690110162fc55!2sR.%20da%20Grota%2C%20483%20-%20Vila%20Gustavo%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002206-010!5e0!3m2!1spt-BR!2sbr!4v1624979581517!5m2!1spt-BR!2sbr" width="40%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
                 </div>
 <?php get_footer(); ?>

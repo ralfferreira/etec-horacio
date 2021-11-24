@@ -31,12 +31,12 @@
             </div>
             <div class="about-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/peoples.svg" alt="Pessoas">
-                <h3>+ de 900 alunos</h3>
+                <h3>+ de 2300 alunos</h3>
                 <p>Frequentam nossa escola todos os dias</p>
             </div>
             <div class="about-card ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/smiling-face.svg" alt="Alunos">
-                <h3>+ de 100 funcionários</h3>
+                <h3>+ de 140 funcionários</h3>
                 <p>Formando excelentes profissionais</p>
             </div>
         </div>

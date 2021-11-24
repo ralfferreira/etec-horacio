@@ -25,14 +25,13 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                        <li><a href="<?php bloginfo('url');?>">Início</a></li>
-                        <li><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
-                        <li><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
+                        <li <?php if(is_page('/')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url') ;?>">Início</a></li>
+                        <li <?php if(is_page('cursos')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
+                        <li <?php if(is_page('extensoes')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
                         <!-- <li><a href="#"></a>Escola</li> 
-                            <li><a href="#"></a>Instiucional</li> -->
-                        <li><a href="<?php bloginfo('url');?>/contato">Contato</a></li>
-                        <li><a href="<?php bloginfo('url');?>/blog">Notícias</a></li>
+                        <li><a href="#"></a>Instiucional</li> -->
+                        <li <?php if(is_page('contato')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/contato">Contato</a></li>
+                        <li <?php if(is_page('blog')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/blog">Notícias</a></li>
                     </ul>
             </header>
             <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
-            
