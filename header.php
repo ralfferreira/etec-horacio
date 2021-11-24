@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/splide/splide-core.min.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-    <?php wp_head();?>
+    
 </head>
 <body>
     <div class="content">
@@ -25,7 +25,11 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                        <li <?php if(is_page('/')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url') ;?>">Início</a></li>
+                    <?php $currentpage = $_SERVER['REQUEST_URI'];?>
+                        <li
+                            <?php if($currentpage=="/" || $currentpage=="/index.php" || $currentpage=="/index" || $currentpage=="" ) { ?> 
+                            class="active"<?php } ?>><a href="<?php bloginfo('url') ;?>">Início</a>
+                        </li> 
                         <li <?php if(is_page('cursos')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/cursos">Cursos</a></li>
                         <li <?php if(is_page('extensoes')) { ?> class="active" <?php } ?>><a href="<?php bloginfo('url');?>/extensoes">Extensões</a></li>
                         <!-- <li><a href="#"></a>Escola</li> 
