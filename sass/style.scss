@@ -347,13 +347,58 @@ h3{
             display: flex;
             flex-direction: column;
             align-items: center;
-            @media (max-width: 1024px) {
-                display: none;
-            }
-
-            & .home-landing-carousel-img{
+            & #image-slider {
                 width: 100%;
                 height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 2px solid $color-light-gray;
+                background-color: $color-light-gray;
+                & .splide__progress__bar {
+                    height: 5px;
+                    background: $color-red;
+                }
+                & .splide__pagination {
+                    background-color: $color-light-black-tonality2;
+                    justify-content: space-evenly;
+                    & li button {
+                        width: 10px;
+                        height: 10px;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+                        background-color: $color-white;
+                        border: 0;
+                        border-radius: 50%;
+                        &:active, &:focus {
+                            background-color: $color-red;
+                        }
+                    }
+                    & li .is-active {
+                        background-color: $color-red;
+                    }
+                }
+                & .splide__arrows {
+                    display: none;
+                }
+                & .splide__track {
+                    width: 100%;
+                    height: 100%;
+                    & .splide__list {
+                        & .splide__slide {
+                            width: 100%;
+                            height: 100%;
+                            & img {
+                                width: 100%;
+                                height: 400px;
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+                display: none;
             }
         }
     }
@@ -1798,11 +1843,10 @@ h3{
     font-family: $font-family-content;
 
     & .splide__track{
-        display: flex;
+        // display: flex;
         text-align: center;
-        padding-left: 100px;
         @media (max-width: 768px) {
-            padding-left: 30px;
+            display: flex;
         } 
     }
     

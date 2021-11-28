@@ -54,13 +54,18 @@
 
 document.addEventListener( 'DOMContentLoaded', function () {
 	new Splide( '#card-slider', {
-		perPage    : 4,
-		breakpoints: {
-			500: {
-				perPage: 2,
-			}
-		},
+		perPage: 4,
+    padding: { left: 100 },
     pagination: false,
+    breakpoints: {
+			767: {
+				perPage: 2,
+        padding: { left: 30 },
+			},
+      900: { 
+        padding: { left: 15 },
+      },
+		},
     'arrowPath': 'm15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z',
     classes: {
       prev  : 'splide__arrow--prev prev',

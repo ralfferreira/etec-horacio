@@ -5,7 +5,7 @@
                 <div class="extensions-landing-content">
                         <div class="extensions-landing-text">
                             <h3 class="extensions-landing-text-hashtag">#VemProHAS</h3>
-                            <h1 class="extensions-landing-text-title">Afranio, <br>Carmosina,<br>Ligabue</h1>
+                            <h1 class="extensions-landing-text-title">Afranio, <br>Carmosina</h1>
                         </div>
                     </div>
                 </div>

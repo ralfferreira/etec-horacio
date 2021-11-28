@@ -11,8 +11,45 @@
                 </div>
                 
                 <div class="home-landing-carousel">
-                    <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/teste.webp" alt="Etec Horácio">
-                    <!-- <img class="home-landing-carousel-img-button" src="assets/img/only-left.svg" alt="Exemplo"> -->
+                    <div id="image-slider" class="splide">
+                        <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/school.svg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/school.svg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div>
+                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="splide__progress">
+                                <div class="splide__progress__bar"></div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +132,7 @@
                 <h2 class="news-text-title">Notícias e comunicados</h2>
             </div>
             <div class="news-content">
-                <?php query_posts('posts_per_page=4'); ?>
+            <?php query_posts('posts_per_page=4'); ?>
                 <?php while(have_posts()):the_post(); ?>
                     <article class="news-content-post">
                         <a href="<?php the_permalink()?>">
@@ -220,3 +257,5 @@
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/faq.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/carousel-index.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/splide.min.js"></script>
