@@ -1,9 +1,60 @@
 <footer class="footer">
             <div class="footer-partners">
                 <h2>Parceiros</h2>
+                <script>
+                    document.addEventListener( 'DOMContentLoaded', function () {
+                        new Splide( '.footer-partners-img', {
+                            type   : 'loop',
+                            drag   : 'free',
+                            focus  : 'center',
+                            perPage: 4,
+                            autoScroll: {
+                                speed: 1.4,
+                                pauseOnHover: true,
+                                pauseOnFocus: false,
+                            },
+                            pagination: false,
+                        } ).mount(window.splide.Extensions);
+                    } );
+                </script>
                 <div class="footer-partners-img">
-                    <a href="https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/microsoftteams logo.svg" alt="Teams logo"></a>
-                    <a href="https://www.totvs.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/TOTVS logo.svg" alt="TOTVS logo"></a>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/teams.png" alt="Teams logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.totvs.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/totvs.png" alt="TOTVS logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://aws.amazon.com/pt/education/awseducate/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aws.png" alt="AWS logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.cisco.com/c/pt_br/index.html" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cisco.png" alt="Cisco logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.jabrasil.org.br/sp" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/jasp.png" alt="JA SP logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.microsoft.com/pt-br" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/microsoft.png" alt="Microsoft logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.oracle.com/br/index.html" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/oracle.png" alt="Oracle logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.ibm.com/br-pt" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ibm.svg" alt="IBM logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.andra.com.br/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/andra.png" alt="Andra logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="http://www.irani.com.br/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/irani.png" alt="Irani logo"></a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://nubank.com.br/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/nubank.png" alt="Nubank logo"></a>
+                            </li>
+                        </ul>
+                    </div>                    
                 </div>
             </div>
             <div class="footer-row">
@@ -35,6 +86,7 @@
             <?php wp_footer(); ?>
         </footer>
     </div>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/splide-extension-auto-scroll.js"></script>
 </body>
 </html>
             

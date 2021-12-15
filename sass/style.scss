@@ -1300,6 +1300,9 @@ h3{
         padding: 45px;
         padding-left: 40px;
     }
+    & .active {
+        border-bottom: 0;
+    }
     & .faq-title{
         font-style: normal;
         font-weight: 600;
@@ -1663,13 +1666,23 @@ h3{
         }
         & .footer-partners-img {
             margin-left: 100px;
+            display: flex;
+            flex-direction: row;
+            width: 75vw;
             @media (max-width: 767px) {
                 margin-left: 50px;        
             }
+            & a {
+                text-decoration: none;
+                border: 0;
+            }
+            & .splide__arrows {
+                display: none;
+            }
             & img {
-                width: 88px;
-                height: 88px;
-                margin-right: 40px;
+                width: 120px;
+                height: 120px;
+                margin-right: 30px;
             }
             @media (min-width: 768px) and (max-width: 1024px) {
                 margin-left: 30px;

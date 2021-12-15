@@ -39,3 +39,15 @@ function custom_title($wp_customize){
 }
 
 add_action( 'customize_register', 'custom_title' );
+
+function wpse121723_register_sidebars() {
+    register_sidebar( array(
+        'name' => 'Home right sidebar',
+        'id' => 'home_right_1',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpse121723_register_sidebars' );

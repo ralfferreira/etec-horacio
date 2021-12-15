@@ -14,36 +14,18 @@
                     <div id="image-slider" class="splide">
                         <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/school.svg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/school.svg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <div>
-                                            <img class="home-landing-carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/EntradadaSecretaria.jpg" alt="Etec Horácio">
-                                        </div>
-                                    </li>
+                                    <?php 
+                                        $fields = CFS()->get( 'imagens_do_carrossel' );
+                                        foreach ( $fields as $field ) { 
+                                        ?>
+                                        <li class="splide__slide">
+                                            <div>
+                                                <a target="_blank" href="<?php echo $field['link_da_imagem']; ?>">
+                                                    <img class="home-landing-carousel-img" src="<?php echo $field['imagem_escolhida']; ?>" alt="Etec Horácio">
+                                                </a>
+                                            </div>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <div class="splide__progress">
