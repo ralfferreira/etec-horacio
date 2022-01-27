@@ -3,13 +3,11 @@
 	Author: Guilherme e Ralf
 */
 
-
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); // Rock Salt
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap'); // Inter
 $font-family-hashtag: 'Rock Salt', cursive;
 $font-family-content: 'Inter', sans-serif;
-
 
 // Colors
 $color-red: #D5342A;
@@ -29,6 +27,23 @@ $color-white-tonality3: #f6f6f6;
 $color-blue: blue;
 
 // Mixins
+
+@mixin full-size{
+	width: 100%;
+	height: 100%;
+}
+
+@mixin template-flex-center{
+	align-items: center;
+    display: flex;
+	justify-content: center;
+}
+
+@mixin template-flex-between{
+	align-items: center;
+    display: flex;
+	justify-content: space-between;
+}
 
 // General Elements
 
@@ -51,11 +66,10 @@ h3{
     font-size: 24px;
 }
 .content {
-    width: 100%;
-    height: 100%;
+    @include full-size;
 }
 .active {
-    border-bottom: 2px solid #D5342A;
+    border-bottom: 2px solid $color-red;
 }
 
 // Home Landing 
@@ -193,13 +207,11 @@ h3{
             font-size: 18px;
             color: $color-black;
             font-family: $font-family-content;
-            display: flex;
+            @include template-flex-between;
             flex-direction: row;
             list-style: none;
-            justify-content: space-between;
             margin-top: 15px;
             margin-right: 90px;
-            align-items: center;
             width: 40%;
             & li a{
                 color: $color-black;
@@ -209,9 +221,7 @@ h3{
     }
     .home-landing-content {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include template-flex-between;
 
         @media (min-width: 300px) and (max-width: 426px) {
             align-items: center;
@@ -306,9 +316,7 @@ h3{
                     margin: auto;
                 }
                 & .home-landing-button-link, .home-landing-text-link{
-                    align-items: center;
-                    justify-content: center;
-                    display: flex;
+                    @include template-flex-center;
                     font-style: normal;
                     font-size: 16px;
                     font-family: $font-family-content;                   
@@ -348,8 +356,7 @@ h3{
             flex-direction: column;
             align-items: center;
             & #image-slider {
-                width: 100%;
-                height: 100%;
+                @include full-size;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -382,12 +389,10 @@ h3{
                     display: none;
                 }
                 & .splide__track {
-                    width: 100%;
-                    height: 100%;
+                    @include full-size;
                     & .splide__list {
                         & .splide__slide {
-                            width: 100%;
-                            height: 100%;
+                            @include full-size;
                             & img {
                                 width: 100%;
                                 height: 400px;
@@ -415,8 +420,7 @@ h3{
     align-items: center;
     justify-content: space-between;
     @media (max-width: 1280px) {
-        width: 100%;
-        height: 100%;
+        @include full-size;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
@@ -459,10 +463,8 @@ h3{
     & .about-card{
         box-shadow: 0px 0px 32px rgba(187, 187, 187, 0.25);
         border-radius: 8px;
-        display: flex;
+        @include template-flex-center;
         text-align: center;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         height: 375px;
         background-color: $color-white;
@@ -528,8 +530,7 @@ h3{
         height: 100%;
     }
     & .test-etec-info{
-        width: 100%;
-        height: 100%;
+        @include full-size;
         padding: 100px;
         background-image: url('assets/img/arrow.svg');
         background-repeat: no-repeat;
@@ -679,9 +680,7 @@ h3{
             width: 375px;
             height: 150px;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include template-flex-between;
             @media (max-width: 1280px) {
                 width: 80vw;
                 display: grid;
@@ -785,10 +784,8 @@ h3{
 
     & .news-content{
         width: 100%;
-        display: flex;
+        @include template-flex-between;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
         @media (max-width: 767px) {
             flex-wrap: nowrap;
             flex-direction: column;
@@ -850,10 +847,8 @@ h3{
             }
             &:nth-of-type(5) {
                 color: $color-red;
-                display: flex;
                 text-align: center;
-                align-items: center;
-                justify-content: center;
+                @include template-flex-center;
                 font-weight: 600;
                 font-size: 14px;
                 height: 390px;
@@ -887,11 +882,8 @@ h3{
                 }
             }
             & .see-all {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include full-size;
+                @include template-flex-center;
                 text-decoration: none;
                 color: $color-red;
                 &:visited {
@@ -932,9 +924,7 @@ h3{
 .blog-landing-content{
     width: 100%;
     height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include template-flex-between;
     & .blog-landing-text{
         width: 40%;
         flex-direction: column;
@@ -1055,9 +1045,7 @@ h3{
             text-align: center;
             border: 1px solid $color-black;
             margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include template-flex-center;
             text-decoration: none;
             font-weight: 600;
             &:checked, &:active, &:hover {
@@ -1084,9 +1072,7 @@ h3{
     }
     
     & .splide__arrows {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include template-flex-between;
         margin-bottom: 30px;
     }
 }
@@ -1135,8 +1121,7 @@ h3{
                 grid-template-rows: 470px 30px;
             }
             & img {
-                width: 100%;
-                height: 100%;
+                @include full-size;
                 object-fit: cover;
                 border-top-right-radius: 10px;
                 border-top-left-radius: 10px;
@@ -1164,9 +1149,7 @@ h3{
 }
 
 .news-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include template-flex-center;
     margin-top: 20px;
     margin-bottom: 20px;
     & .page-numbers {
@@ -1335,9 +1318,7 @@ h3{
                 width: 80vw;
             }
             & .question{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include template-flex-between;
                 color: $color-black;
                 transition: 0.7s ease;
                 & p{
@@ -1400,9 +1381,7 @@ h3{
 .extensions-landing-content{
     width: 100%;
     height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include template-flex-between;
     & .extensions-landing-text{
         width: 40%;
         flex-direction: column;
@@ -1442,8 +1421,7 @@ h3{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
+    @include full-size;
     border-bottom: 1px solid $color-gray-tonality3;
     @media (max-width: 768px) {
         display: grid;
@@ -1503,9 +1481,7 @@ h3{
 .contact-landing-content{
     width: 100%;
     height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include template-flex-between;
     @media (max-width: 767px) {
         display: flex;
         flex-direction: column;
@@ -1515,10 +1491,8 @@ h3{
     }
     @media (min-width: 768px) and (max-width: 1280px) {
         flex-direction: column;
-        align-items: center;
+        @include template-flex-center;
         margin-top: 90px;
-        display: flex;
-        justify-content: center;
         text-align: center;
     }
     & .contact-landing-text{
@@ -1527,9 +1501,7 @@ h3{
         padding-left: 100px;
         @media (min-width: 768px) and (max-width: 1280px) {
             padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include template-flex-center;
         }
         @media (max-width: 767px) {
             padding: 0px;
@@ -1749,8 +1721,7 @@ h3{
     & .footer-sitemap, .footer-social-media, .footer-school-location {
         height: 350px;
         @media (max-width: 767px) {
-            width: 100%;
-            height: 100%;
+            @include full-size;
         }
     }
     & .footer-sitemap ul {
@@ -1790,9 +1761,7 @@ h3{
 .courses-landing-content{
     width: 100%;
     height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include template-flex-between;
     & .courses-landing-text{
         width: 40%;
         flex-direction: column;
@@ -1851,8 +1820,7 @@ h3{
 
 .courses {
     background-color: $color-white;
-    width: 100%;
-    height: 100%;
+    @include full-size;
     font-family: $font-family-content;
 
     & .splide__track{
@@ -1864,9 +1832,7 @@ h3{
     }
     
     & .splide__arrows {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include template-flex-center;
         margin-bottom: 30px;
     }
     
@@ -1895,9 +1861,7 @@ h3{
     
     & .our-courses {
         @media (max-width: 768px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include template-flex-center;
             text-align: center;
         }
         & .courses-title {
@@ -1954,10 +1918,8 @@ h3{
                 border-radius: 8px;
                 width: 200px;
                 height: 200px;
-                display: flex;
+                @include template-flex-center;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 margin-bottom: 20px;
                 cursor: pointer;
                 
@@ -1976,8 +1938,7 @@ h3{
              }
         }
          & .course-content{
-             width: 100%;
-             height: 100%;
+            @include full-size;
              background-color: $color-light-gray;
              padding: 40px;
              flex-direction: column;
@@ -1990,8 +1951,7 @@ h3{
             }
             @media (max-width: 767px) {
                 padding-left: 30px;
-                width: 100%;
-                height: 100%;
+                @include full-size;
             }
 
              & div{
@@ -2036,9 +1996,7 @@ h3{
 }
 
 .gallery-cell{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include template-flex-center;
     flex-direction: column;
     width: 150px;
     height: 150px;                
